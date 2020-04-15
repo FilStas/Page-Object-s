@@ -1,5 +1,5 @@
 plugins {
-    id "io.freefair.lombok" version "5.0.0-rc6"
+    id "io.freefair.lombok" version "4.1.6"
     id 'java'
 }
 
@@ -13,9 +13,6 @@ compileTestJava.options.encoding = "UTF-8"
 
 repositories {
     mavenCentral()
-    maven {
-        url "https://plugins.gradle.org/m2/"
-    }
 }
 
 dependencies {
@@ -28,18 +25,9 @@ dependencies {
     // https://mvnrepository.com/artifact/com.github.javafaker/javafaker
     compile group: 'com.github.javafaker', name: 'javafaker', version: '1.0.2'
 
-    compileOnly 'org.projectlombok:lombok:1.18.12'
-    annotationProcessor 'org.projectlombok:lombok:1.18.12'
-
-    testCompileOnly 'org.projectlombok:lombok:1.18.12'
-    testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
-
-
-
-
 }
 
-apply plugin: "io.freefair.lombok"
+
 
 test {
     useJUnitPlatform()
